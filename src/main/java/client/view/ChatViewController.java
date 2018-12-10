@@ -494,11 +494,8 @@ public class ChatViewController implements Initializable {
     @FXML
     private void handleClientChoice(MouseEvent event) {
         if (event.getClickCount() == 1) {
-            String receiver = contactListView
-                    .getSelectionModel()
-                    .getSelectedItem()
-                    .getUser()
-                    .getAccount_name();
+            String receiver = contactListView.getSelectionModel().getSelectedItem().getTopic();
+            //showAlert("Сообщения будут отправляться контакту " + receiver, Alert.AlertType.INFORMATION);
             clientController.setReceiver(receiver);
         }
 
